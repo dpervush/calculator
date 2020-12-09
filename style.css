@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+
+  background: hsla(158, 100%, 92%, 1);
+  background: linear-gradient(225deg, hsla(158, 100%, 92%, 0.5) 0%, hsla(211, 100%, 28%, 1) 100%);
+  background: -moz-linear-gradient(225deg, hsla(158, 100%, 92%, 0.5) 0%, hsla(211, 100%, 28%, 1) 100%);
+  background: -webkit-linear-gradient(225deg, hsla(158, 100%, 92%, 0.5) 0%, hsla(211, 100%, 28%, 1) 100%);
+}
+
+.grid {
+  width: 30%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  gap: 5px;
+}
+
+.output {
+  grid-column: 1 /-1;
+  padding: 20px 30px 20px 10px;
+
+  color: #000000;
+  text-align: right;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous-operand {
+  min-height: 20px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.current-operand {
+  min-height: 48px;
+}
+
+.output,
+button {
+  background-color: #f3fffb;
+  font-size: 48px;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid #003c7d;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+button {
+  padding: 20px 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:active {
+  background-color: #003c7d;
+}
